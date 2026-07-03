@@ -1,0 +1,133 @@
+<!doctype html>
+
+<head>
+    <title>Skyline</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=LINE+Seed+JP&display=swap" rel="stylesheet">
+
+
+    <style>
+        :root {
+            --color-heading: white;
+            --color-background: #f2e8f7;
+            --color-box-background: #e8f7f6;
+            --color-box-outline: #b7ddff;
+        }
+        body {
+            margin: 0;
+            background-color: var(--color-background)
+        }
+        .banner {
+            position: relative;
+            text-align: center;
+            height: 70vh;
+            overflow: hidden;
+        }
+
+        .banner img {
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .heading {
+            font-size: 10vw;
+            color: var(--color-heading);
+        }
+
+        .subheading {
+            font-size: 3vw;
+            color: var(--color-headings);
+        }
+
+        .centered-text {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        .center {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .hc-logo {
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 15vw;
+            z-index: 99;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .hc-logo:hover {
+            transform: scale(1.1);
+        }
+
+        .stepbox {
+            width: 25vw;
+            height: 25wh;
+            border: 2px solid var(--color-box-outline);
+            border-radius: 20px;
+            background-color: var(--color-box-background);
+            padding: 10px;
+        }
+
+
+        h1 {
+            font-family: "Dela Gothic One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            margin: 0;
+        }
+
+        h2 {
+            font-family: "Dela Gothic One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            margin: 0;
+        }
+
+
+        p {
+            font-family: "LINE Seed JP", sans-serif;
+        }
+
+    </style>
+</head>
+
+<body>
+    <img class="hc-logo" src="https://assets.hackclub.com/flag-orpheus-top.svg"/>
+    <div class="banner">
+        <img src="assets/tokyo.jpg"></img>
+        <div class="centered-text">
+            <h1 class="heading">SKYLINE</h1>
+            <h2 class="subheading">Build a robot, come to Tokyo</h2>
+        </div>
+    </div>
+
+    <div>
+        <h1>How it works</h1>
+        <div class="stepbox">
+            <h2>1. Plan</h2>
+            <p>Plan your robot, design any PCBs, and create a bill of materials</p>
+        </div>
+
+        <div class="stepbox">
+            <h2>2. Build</h2>
+            <p>Get funding for your robot and make it a reality</p>
+        </div>
+
+        <div class="stepbox">
+            <h2>3. Tokyo</h2>
+            <p>Come to Tokyo, the world's electronic city! Explore the city and participate in an amazing global teen hackathon! <br><br>
+               Can't come to Tokyo? Use your hours towards prizes!</p>
+        </div>
+    </div>
+</body>
