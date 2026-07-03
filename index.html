@@ -11,7 +11,7 @@
     <style>
         :root {
             --color-heading: white;
-            --color-background: #f2e8f7;
+            --color-background: white;
             --color-box-background: #e8f7f6;
             --color-box-outline: #b7ddff;
         }
@@ -41,7 +41,7 @@
 
         .subheading {
             font-size: 3vw;
-            color: var(--color-headings);
+            color: var(--color-heading);
         }
 
         .centered-text {
@@ -70,13 +70,19 @@
             transform: scale(1.1);
         }
 
+        .module {
+            padding: 4vh 5vw;
+            margin: 2%;
+        }
+
         .stepbox {
             width: 25vw;
-            height: 25wh;
+            height: 25vh;
             border: 2px solid var(--color-box-outline);
             border-radius: 20px;
             background-color: var(--color-box-background);
             padding: 10px;
+            margin:10px;
         }
 
 
@@ -112,22 +118,24 @@
         </div>
     </div>
 
-    <div>
+    <div class="module">
         <h1>How it works</h1>
-        <div class="stepbox">
-            <h2>1. Plan</h2>
-            <p>Plan your robot, design any PCBs, and create a bill of materials</p>
-        </div>
+        <div class="center">
+            <div class="stepbox">
+                <h2>1. Plan</h2>
+                <p>Plan your robot, design any PCBs, and create a bill of materials</p>
+            </div>
 
-        <div class="stepbox">
-            <h2>2. Build</h2>
-            <p>Get funding for your robot and make it a reality</p>
-        </div>
+            <div class="stepbox">
+                <h2>2. Build</h2>
+                <p>Get funding for your robot and make it a reality</p>
+            </div>
 
-        <div class="stepbox">
-            <h2>3. Tokyo</h2>
-            <p>Come to Tokyo, the world's electronic city! Explore the city and participate in an amazing global teen hackathon! <br><br>
-               Can't come to Tokyo? Use your hours towards prizes!</p>
+            <div class="stepbox">
+                <h2>3. Tokyo</h2>
+                <p>Come to Tokyo, the world's electronic city! Explore the city and participate in an amazing global teen hackathon! <br><br>
+                   Can't come to Tokyo? Use your hours towards prizes!</p>
+            </div>
         </div>
     </div>
 </body>
