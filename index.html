@@ -17,7 +17,7 @@
         }
         body {
             margin: 0;
-            background-color: var(--color-background)
+            background-color: var(--color-background);
         }
         .banner {
             position: relative;
@@ -73,17 +73,84 @@
         .module {
             padding: 4vh 5vw;
             margin: 2%;
+            overflow-hidden: clip;
+            overflow-x: hidden;
+        }
+
+        .module h1 {
+            padding-bottom: 5vh;
         }
 
         .stepbox {
             width: 25vw;
-            height: 25vh;
+            height: 35vh;
             border: 2px solid var(--color-box-outline);
             border-radius: 20px;
             background-color: var(--color-box-background);
             padding: 10px;
             margin:10px;
         }
+
+        .stepbox img {
+            height: 10vw;
+        }
+
+        .scroll-card {
+            width: 20vw;
+            height: 34vh;
+            flex-shrink: 0;
+            border: 2px solid var(--color-box-outline);
+            border-radius: 20px;
+            background-color: var(--color-box-background);
+            overflow: hidden;
+        }
+
+        .scroll-card-text {
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .scroll-card img {
+            height: 33%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .scroll-container {
+          display: flex;
+          gap: 20px;
+          animation: scroll 20s linear infinite;
+        }
+
+        .row {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .column {
+          flex: 50%;
+        }
+
+        .column img {
+            width: 50vw;
+        }
+
+        /* Pause animation on hover so users can read/click */
+        .scroll-container:hover {
+          animation-play-state: paused;
+        }
+
+        /* The Animation */
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            /* Adjust this percentage based on your duplicated content width */
+            transform: translateX(-50%);
+          }
+        }
+
 
 
         h1 {
@@ -103,13 +170,31 @@
 
         p {
             font-family: "LINE Seed JP", sans-serif;
+            line-height: 1.5;
+        }
+
+        footer {
+            background-color: var(--color-box-background);
+            display: flex;
+            align-items: center;
+            height: 10vh;
+            padding: 2vh 5vw;
+        }
+
+        footer .row {
+            width: 100%;
+            justify-content: space-between; /* already set, but confirm it stays */
+        }
+
+        footer .column {
+            flex: 0 1 auto; /* override the 50% flex-basis from .column */
         }
 
     </style>
 </head>
 
 <body>
-    <img class="hc-logo" src="https://assets.hackclub.com/flag-orpheus-top.svg"/>
+    <a href="https://hackclub.com"><img class="hc-logo" src="https://assets.hackclub.com/flag-orpheus-top.svg"/></a>
     <div class="banner">
         <img src="assets/tokyo.jpg"></img>
         <div class="centered-text">
@@ -122,20 +207,105 @@
         <h1>How it works</h1>
         <div class="center">
             <div class="stepbox">
+                <img src="assets/plan.png"/>
                 <h2>1. Plan</h2>
                 <p>Plan your robot, design any PCBs, and create a bill of materials</p>
             </div>
 
             <div class="stepbox">
+                <img src="assets/build.png"/>
                 <h2>2. Build</h2>
                 <p>Get funding for your robot and make it a reality</p>
             </div>
 
             <div class="stepbox">
+                <img src="assets/tokyo2.png"/>
                 <h2>3. Tokyo</h2>
-                <p>Come to Tokyo, the world's electronic city! Explore the city and participate in an amazing global teen hackathon! <br><br>
-                   Can't come to Tokyo? Use your hours towards prizes!</p>
+                <p>Come to Tokyo, the world's electronic city! Explore the city and participate in an amazing global teen hackathon!</p>
             </div>
         </div>
     </div>
+
+    <div class="module">
+        <div class="row">
+          <div class="column">
+              <h1>Why Tokyo?</h1>
+              <p>Tokyo is the capital of Japan, and home to over 37 million people!
+
+                  <br><br>
+                Japan is the world leader in robotics, with Japanese companies supplying 50% of the world’s robots.
+
+                  <br><br>
+                It's also a great base for a hackathon, with electronics and other component shops scattered around the city (see: Akihabara)!</p>
+          </div>
+          <div class="column">
+              <img src="assets/tokyo-collage.png"/>
+          </div>
+        </div>
+
+
+
+    </div>
+
+    <div class="module">
+        <h1>What can I build?</h1>
+        <p>Check out other robot projects from teens in Hack Club!</p>
+        <div class="scroll-container">
+            <div class="scroll-card">
+                <img src="https://private-user-images.githubusercontent.com/176168773/517781952-cadff312-ba82-44c8-aa8c-f7b8f666c1b0.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODM1MTc5OTEsIm5iZiI6MTc4MzUxNzY5MSwicGF0aCI6Ii8xNzYxNjg3NzMvNTE3NzgxOTUyLWNhZGZmMzEyLWJhODItNDRjOC1hYThjLWY3YjhmNjY2YzFiMC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwNzA4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDcwOFQxMzM0NTFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1kNDhlNDMwMTlkMGMzMjIyYThhZTlhNDg4YzI2ZmM2MTNjNDMxOWE1YzUyMmQ2MGMwNjUwZDA0NzljZTU0MzU1JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZwbmcifQ.rde6SFACxiWZPDELAgML7vwBcYYN3bVs8o5wbsKc790"/>
+                <div class="scroll-card-text">
+                    <h2>GPT on Wheels</h2>
+                    <p>Shreemahor built an AI-controlled home robot with voice, vision and environmental sensors!</p>
+                </div>
+            </div>
+            <div class="scroll-card">
+                <img src="https://blueprint.hackclub.com/user-attachments/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTAyMjcsInB1ciI6ImJsb2JfaWQifX0=--2da6ccf181529f2a256868132eba15941010c3ab/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJwbmciLCJyZXNpemVfdG9fbGltaXQiOlsyMDAwLDIwMDBdLCJjb252ZXJ0Ijoid2VicCIsInNhdmVyIjp7InF1YWxpdHkiOjgwLCJzdHJpcCI6dHJ1ZX19LCJwdXIiOiJ2YXJpYXRpb24ifX0=--0f85faa91c373105a0f317054e965c1f47e93a37/image.png"/>
+                <div class="scroll-card-text">
+                    <h2>BowBot</h2>
+                    <p>Ved built a robotic arm to play the violin!</p>
+                </div>
+            </div>
+            <div class="scroll-card">
+                <img src="https://user-cdn.hackclub-assets.com/019ec3d4-a685-7c59-b881-b55d6417bc34/download.gif"/>
+                <div class="scroll-card-text">
+                    <h2>Self-balancing robot</h2>
+                    <p>Ben built a robot that keeps itself upright!</p>
+                </div>
+            </div>
+            <div class="scroll-card">
+                <img src="https://cdn.hackclub.com/019eb083-14db-7ebf-8338-729ef0d4dc61/Screenshot%202026-06-10%20131813.png"/>
+                <div class="scroll-card-text">
+                    <h2>PID Line Follower</h2>
+                    <p>Arnav built a line-following robot using the PID algorithm and a Bluetooth interface!</p>
+                </div>
+            </div>
+            <div class="scroll-card">
+                <img src="https://cdn.hackclub.com/019e7af0-7d54-77ff-ac07-236e2968b075/20260106_220205.jpg"/>
+                <div class="scroll-card-text">
+                    <h2>Robot Car</h2>
+                    <p>Koray built a robot car that detects obstacles and surface edges to keep itself safe!</p>
+                </div>
+            </div>
+            <div class="scroll-card">
+                <img src="https://cdn.hackclub.com/019f02e8-4a3b-79b3-8919-98ed9180385a/Screenshot%202026-06-25%20231524.png"/>
+                <div class="scroll-card-text">
+                    <h2>Quadruped</h2>
+                    <p>Rutvik designed a servo-based quadruped robot with a custom PCB!</p> <!-- Fixed! -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="row">
+            <div class="column">
+                <p>Made with &#x1F496; by teens from <a href="https://hackclub.com">Hack Club</a>!</p>
+            </div>
+            <div class="column" style="text-align: right;">
+                <a href="https://hackclub.com/philosophy"><p>About</p></a>
+                <a href="https://hackclub.com/privacy-and-terms"><p>Privacy & terms</p></a>
+            </div>
+        </div>
+    </footer>
+
 </body>
