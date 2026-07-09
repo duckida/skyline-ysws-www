@@ -1,26 +1,224 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --color-heading: white;
+    --color-background: white;
+    --color-box-background: #e8f7f6;
+    --color-box-outline: #b7ddff;
+    --color-button: #b7ddff;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-background: var(--color-background);
+  --color-foreground: var(--color-box-background);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: var(--color-background);
+}
+.banner {
+    position: relative;
+    text-align: center;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.banner img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.heading {
+    font-size: 10vw;
+    color: var(--color-heading);
+}
+
+.subheading {
+    font-size: 3vw;
+    color: var(--color-heading);
+}
+
+.centered-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hc-logo {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 15vw;
+    z-index: 99;
+    transition: all 0.2s ease-in-out;
+}
+
+.hc-logo:hover {
+    transform: scale(1.1);
+}
+
+.module {
+    padding: 4vh 5vw;
+    margin: 2%;
+    overflow-hidden: clip;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+}
+
+.module h1 {
+    padding-bottom: 5vh;
+}
+
+.stepbox {
+    width: 25vw;
+    height: 35vh;
+    border: 2px solid var(--color-box-outline);
+    border-radius: 20px;
+    background-color: var(--color-box-background);
+    padding: 10px;
+    margin:10px;
+}
+
+.stepbox img {
+    height: 10vw;
+}
+
+.scroll-card {
+    width: 20vw;
+    height: 34vh;
+    flex-shrink: 0;
+    border: 2px solid var(--color-box-outline);
+    border-radius: 20px;
+    background-color: var(--color-box-background);
+    overflow: hidden;
+}
+
+.scroll-card-text {
+    padding: 10px;
+    margin: 10px;
+}
+
+.scroll-card img {
+    height: 33%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.scroll-container {
+  display: flex;
+  gap: 20px;
+  animation: scroll 20s linear infinite;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+  flex: 50%;
+}
+
+.column img {
+    width: 50vw;
+}
+
+/* Pause animation on hover so users can read/click */
+.scroll-container:hover {
+  animation-play-state: paused;
+}
+
+/* The Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Adjust this percentage based on your duplicated content width */
+    transform: translateX(-50%);
+  }
+}
+
+
+
+h1 {
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+}
+
+h2 {
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+}
+
+
+p {
+    font-family: "LINE Seed JP", sans-serif;
+    line-height: 1.5;
+}
+
+
+.rsvp-button {
+    border-radius: 30px;
+    color: white;
+    font-size: 20px;
+    background: rgb(67, 129, 255);
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+}
+
+.slack-button {
+    border-radius: 30px;
+    color: white;
+    font-size: 20px;
+    background: #ec3750;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+}
+
+button:hover {
+    background: var(--color-box-background);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Centers the buttons horizontally */
+    gap: 20px; /* Adds space between the two buttons */
+    margin-top: 20px; /* Optional: adds space above the buttons */
+}
+
+
+
+footer {
+    background-color: var(--color-box-background);
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    padding: 2vh 5vw;
+}
+
+footer .row {
+    width: 100%;
+    justify-content: space-between; /* already set, but confirm it stays */
+}
+
+footer .column {
+    flex: 0 1 auto; /* override the 50% flex-basis from .column */
 }
