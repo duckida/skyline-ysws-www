@@ -1,4 +1,10 @@
 import Image from "next/image";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 
 export default function Home() {
   return (
@@ -15,13 +21,12 @@ export default function Home() {
         rel="stylesheet"
       />
       <a href="https://hackclub.com">
-        <Image
+        <img
           className="hc-logo"
-          src="https://assets.hackclub.com/flag-orpheus-top.svg"
-        alt="Hack Club logo"/>
+          src="https://assets.hackclub.com/flag-orpheus-top.svg"/>
       </a>
       <div className="banner">
-        <Image src="assets/tokyo.jpeg" alt="Tokyo background"/>
+        <Image src="/assets/tokyo.jpeg" alt="Tokyo background" fill style={{ objectFit: 'cover' }}/>
         <div className="centered-text">
           <h1 className="heading">SKYLINE</h1>
           <h2 className="subheading">Build a robot, come to Tokyo</h2>
@@ -43,17 +48,17 @@ export default function Home() {
         <h1>How it works</h1>
         <div className="center">
           <div className="stepbox">
-            <Image src="assets/plan.png" alt="KiCAD and Fusion 360 windows"/>
+            <img src="/assets/plan.png" alt="KiCAD and Fusion 360 windows"/>
             <h2>1. Plan</h2>
             <p>Plan your robot, design any PCBs, and create a bill of materials</p>
           </div>
           <div className="stepbox">
-            <Image src="assets/build.png" alt="A robot chassis"/>
+            <img src="/assets/build.png" alt="A robot chassis"/>
             <h2>2. Build</h2>
             <p>Get funding for your robot and make it a reality</p>
           </div>
           <div className="stepbox">
-            <Image src="assets/tokyo2.png" alt="Tokyo city"/>
+            <img src="assets/tokyo2.png" alt="Tokyo city"/>
             <h2>3. Tokyo</h2>
             <p>
               Come to Tokyo, the world's electronic city! Explore the city and
@@ -79,7 +84,7 @@ export default function Home() {
             </p>
           </div>
           <div className="column">
-            <Image src="assets/tokyo-collage.png" />
+            <img src="/assets/tokyo-collage.png" alt="Collage of places in Tokyo"/>
           </div>
         </div>
       </div>
@@ -138,11 +143,47 @@ export default function Home() {
               <p>
                 Rutvik designed a servo-based quadruped robot with a custom PCB!
               </p>{" "}
-              {/* Fixed! */}
             </div>
           </div>
         </div>
       </div>
+
+      <div className="module">
+        <h1>FAQ</h1>
+        <Accordion className="max-w-lg mx-auto">
+            <AccordionItem value="builds">
+              <AccordionTrigger>What all can I build?</AccordionTrigger>
+              <AccordionContent>
+                You can build any robot or robotics-related project, including remote control buggies, robot arms, and physical AI projects.
+            </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="ai">
+              <AccordionTrigger>Can I use AI?</AccordionTrigger>
+              <AccordionContent>
+                AI can be used for research, and coding up to 20% of the project. Skyline is designed to help you learn and build yourself, so most of the project should be done by you!
+              </AccordionContent>
+            </AccordionItem>
+              <AccordionItem value="time_tracking">
+                <AccordionTrigger>How do I track time?</AccordionTrigger>
+                <AccordionContent>
+                  Time will be tracked using Hack Club <a href="https://lookout.hackclub.com/">Lookout</a>!
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="travel_stipends">
+                <AccordionTrigger>Will travel be free?</AccordionTrigger>
+                <AccordionContent>
+                  Accomodation will be free, and travel stipends/grants can be purchased with extra hours
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="support">
+                <AccordionTrigger>How can I find out more?</AccordionTrigger>
+                <AccordionContent>
+                  Join <a href="https://app.slack.com/client/E09V59WQY1E/C0BECEUT1FW">#skyline</a> on Slack!
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+      </div>
+
       <footer>
         <div className="row">
           <div className="column">
