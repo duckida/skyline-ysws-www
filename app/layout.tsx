@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Geist } from "next/font/google";
+import { LINE_Seed_JP } from "next/font/google";
 import { cn } from "@/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const line = LINE_Seed_JP({subsets:['latin'],variable:'--font-sans', weight:["400"]});
 
 export const metadata: Metadata = {
   title: "Skyline",
@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("h-full", "antialiased", "font-sans", geist.variable)}
+      className={cn("h-full", "antialiased", "font-sans", line.variable)}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

@@ -84,7 +84,7 @@ export default function Home() {
             </p>
           </div>
           <div className="column">
-            <img src="/assets/tokyo-collage.png" alt="Collage of places in Tokyo"/>
+            <img src="/assets/tokyo-collage.png" alt="Collage of places in Tokyo" className="hover:scale-105 hover:rotate-6"/>
           </div>
         </div>
       </div>
@@ -150,7 +150,7 @@ export default function Home() {
 
       <div className="module">
         <h1>FAQ</h1>
-        <Accordion className="max-w-lg mx-auto">
+        <Accordion className="max-w-lg mx-auto font-sans">
             <AccordionItem value="builds">
               <AccordionTrigger>What all can I build?</AccordionTrigger>
               <AccordionContent>
