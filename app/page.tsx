@@ -150,34 +150,34 @@ export default function Home() {
 
       <div className="module">
         <h1>FAQ</h1>
-        <Accordion className="max-w-lg mx-auto font-sans">
+        <Accordion className="max-w-lg mx-auto">
             <AccordionItem value="builds">
-              <AccordionTrigger>What all can I build?</AccordionTrigger>
-              <AccordionContent>
+              <AccordionTrigger className="text-xl font-heading">What all can I build?</AccordionTrigger>
+              <AccordionContent className="text-lg">
                 You can build any robot or robotics-related project, including remote control buggies, robot arms, and physical AI projects.
             </AccordionContent>
             </AccordionItem>
             <AccordionItem value="ai">
-              <AccordionTrigger>Can I use AI?</AccordionTrigger>
-              <AccordionContent>
+              <AccordionTrigger className="text-xl font-heading">Can I use AI?</AccordionTrigger>
+              <AccordionContent className="text-lg">
                 AI can be used for research, and coding up to 20% of the project. Skyline is designed to help you learn and build yourself, so most of the project should be done by you!
               </AccordionContent>
             </AccordionItem>
               <AccordionItem value="time_tracking">
-                <AccordionTrigger>How do I track time?</AccordionTrigger>
-                <AccordionContent>
+                <AccordionTrigger className="text-xl font-heading">How do I track time?</AccordionTrigger>
+                <AccordionContent className="text-lg">
                   Time will be tracked using Hack Club <a href="https://lookout.hackclub.com/">Lookout</a>!
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="travel_stipends">
-                <AccordionTrigger>Will travel be free?</AccordionTrigger>
-                <AccordionContent>
+                <AccordionTrigger className="text-xl font-heading">Will travel be free?</AccordionTrigger>
+                <AccordionContent className="text-lg">
                   Accomodation will be free, and travel stipends/grants can be purchased with extra hours
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="support">
-                <AccordionTrigger>How can I find out more?</AccordionTrigger>
-                <AccordionContent>
+                <AccordionTrigger className="text-xl font-heading">How can I find out more?</AccordionTrigger>
+                <AccordionContent className="text-lg">
                   Join <a href="https://app.slack.com/client/E09V59WQY1E/C0BECEUT1FW">#skyline</a> on Slack!
                 </AccordionContent>
               </AccordionItem>

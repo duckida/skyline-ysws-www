@@ -90,18 +90,21 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  --font-heading: var(--font-sans);
+  --font-heading: var(--font-heading);
   --font-sans: var(--font-sans);
 }
 
 /* ── Body ── */
 body {
   @apply m-0 bg-background;
+  scroll-snap-type: y mandatory;
 }
 
 /* ── Banner ── */
 .banner {
   @apply relative text-center h-[70vh] overflow-hidden;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 /* ── Headings ── */
@@ -137,8 +140,9 @@ body {
 /* ── Module ── */
 .module {
   @apply p-[4vh_5vw] m-[2%]
-         overflow-x-hidden overflow-clip;
-  scroll-snap-type: x mandatory;
+  overflow-x-hidden overflow-clip;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
   font-family: "LINE Seed JP", sans-serif;
 }
 
