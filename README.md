@@ -6,6 +6,8 @@ This is a website for my Hack Club YSWS idea, Skyline! Build a robot, and come t
 ## how?
 The website is a Next.js app, currently a single-page site. I use Tailwind CSS, as well as shadcn/ui for some components.
 
+At first, I started with a static HTML site, but i realized as the event develops we will need a more scalable solution, so i switched to Next.js.
+
 ## what did i learn?
 I learned CSS & Tailwind tricks such as flexbox, and how to use margins & padding! 
 
