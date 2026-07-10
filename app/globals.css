@@ -238,13 +238,10 @@ p {
   background: rgb(67, 129, 255);
 }
 
+
 .slack-button {
   @apply text-white text-xl pl-5 pr-5 border-none rounded-[30px];
   background: #ec3750;
-}
-
-button:hover {
-  background-color: var(--color-box-background);
 }
 
 .button-container {

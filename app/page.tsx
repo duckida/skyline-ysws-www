@@ -26,18 +26,18 @@ export default function Home() {
           src="https://assets.hackclub.com/flag-orpheus-top.svg"/>
       </a>
       <div className="banner">
-        <Image src="/assets/tokyo.jpeg" alt="Tokyo background" fill style={{ objectFit: 'cover' }}/>
+        <Image src="/assets/tokyo.jpeg" alt="Tokyo background" loading="eager" fill style={{ objectFit: 'cover' }}/>
         <div className="centered-text">
           <h1 className="heading">SKYLINE</h1>
           <h2 className="subheading">Build a robot, come to Tokyo</h2>
           <div className="button-container">
             <a href="https://rsvp.hackclub.community/skyline">
-              <button className="rsvp-button">
+              <button className="rsvp-button p-3 hover:scale-105">
                 <p>RSVP now!</p>
               </button>
             </a>
             <a href="https://app.slack.com/client/E09V59WQY1E/C0BECEUT1FW">
-              <button className="slack-button">
+              <button className="slack-button p-3 hover:scale-105">
                 <p>Join #skyline</p>
               </button>
             </a>
