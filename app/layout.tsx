@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import Script from 'next/script'
 
 const line = LINE_Seed_JP({ subsets: ['latin'], variable: '--font-sans', weight: ["400"] });
-const dela = Dela_Gothic_One({subsets:['latin'],variable:'--font-sans', weight:["400"]});
+const dela = Dela_Gothic_One({subsets:['latin'],variable:'--font-heading', weight:["400"]});
 
 export const metadata: Metadata = {
   title: "Skyline",
