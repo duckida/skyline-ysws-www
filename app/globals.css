@@ -182,6 +182,7 @@ body {
 
 .scroll-container:hover {
   animation-play-state: paused;
+  padding: 0;
 }
 
 /* ── Row / Column ── */

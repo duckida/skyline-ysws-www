@@ -47,17 +47,17 @@ export default function Home() {
       <div className="module">
         <h1>How it works</h1>
         <div className="center">
-          <div className="stepbox">
+          <div className="stepbox stepbox hover:scale-105 hover:rotate-3 transition-transform">
             <img src="/assets/plan.png" alt="KiCAD and Fusion 360 windows"/>
             <h2>1. Plan</h2>
             <p>Plan your robot, design any PCBs, and create a bill of materials</p>
           </div>
-          <div className="stepbox">
+          <div className="stepbox stepbox hover:scale-105 hover:rotate-3 transition-transform">
             <img src="/assets/build.png" alt="A robot chassis"/>
             <h2>2. Build</h2>
             <p>Get funding for your robot and make it a reality</p>
           </div>
-          <div className="stepbox">
+          <div className="stepbox hover:scale-105 hover:rotate-3 transition-transform">
             <img src="assets/tokyo2.png" alt="Tokyo city"/>
             <h2>3. Tokyo</h2>
             <p>
@@ -84,14 +84,14 @@ export default function Home() {
             </p>
           </div>
           <div className="column">
-            <img src="/assets/tokyo-collage.png" alt="Collage of places in Tokyo" className="hover:scale-105 hover:rotate-6"/>
+            <img src="/assets/tokyo-collage.png" alt="Collage of places in Tokyo" className="hover:scale-105 hover:rotate-6 transition-transform"/>
           </div>
         </div>
       </div>
       <div className="module">
         <h1>What can I build?</h1>
         <p>Check out other robot projects from teens in Hack Club!</p>
-        <div className="scroll-container">
+        <div className="scroll-container rotate-358">
           <div className="scroll-card">
             <img src="https://github.com/user-attachments/assets/cadff312-ba82-44c8-aa8c-f7b8f666c1b0" />
             <div className="scroll-card-text">
