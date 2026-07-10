@@ -1,13 +1,14 @@
 # skyline YSWS website
 
 ## what?
-This is a website for my Hack Club YSWS idea, Skyline!
+This is a website for my Hack Club YSWS idea, Skyline! Build a robot, and come to Tokyo!
 
 ## how?
-The website is a Next.js app, with all the code currently in the `app/page.tsx`.
+The website is a Next.js app, currently a single-page site. I use Tailwind CSS, as well as shadcn/ui for some components.
 
 ## what did i learn?
-I learned CSS tricks such as flexbox, and how to use margins & padding! 
+I learned CSS & Tailwind tricks such as flexbox, and how to use margins & padding! 
 
 ## AI declaration
-AI helped me with some CSS and basic debugging. It also converted my static CSS into Tailwind!
+AI helped me with some CSS and basic debugging, and also converted my static CSS into Tailwind.
+All layout, writing, & styling design was done by hand!
